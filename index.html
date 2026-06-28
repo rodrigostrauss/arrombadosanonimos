@@ -85,7 +85,7 @@
           [&nbsp;<a href="https://www.youtube.com/shorts/SewD2d73uUg">HOME</a>&nbsp;]
           [&nbsp;<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">M&Uacute;SICAS</a>&nbsp;]
           [&nbsp;<a href="https://www.4chan.org">SHOWS</a>&nbsp;]
-          [&nbsp;<a href="https://hackertyper.net/">FOTOS</a>&nbsp;]
+          [&nbsp;<a id="link-fotos" href="https://fakeupdate.net/">FOTOS</a>&nbsp;]
           [&nbsp;<a href="#">LIVRO&nbsp;DE&nbsp;VISITAS</a>&nbsp;]
         </b></font>
 
@@ -104,5 +104,21 @@
     </font>
 
   </center>
+  <script>
+    // detecta o sistema e manda a "atualizacao" falsa certa
+    (function () {
+      var ua = navigator.userAgent || "";
+      var link = document.getElementById("link-fotos");
+      if (!link) return;
+      var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/i.test(ua);
+      if (isIOS) {
+        link.href = "https://fakeupdate.net/mobile/apple/";
+      } else if (isAndroid) {
+        link.href = "https://fakeupdate.net/mobile/android/";
+      }
+    })();
+  </script>
 </body>
 </html>
