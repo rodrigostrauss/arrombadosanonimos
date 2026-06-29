@@ -216,13 +216,12 @@ TÁ OLHANDO O QUE AQUI SEU ARROMBADO?
       }
     })();
 
-    // pegadinha do "SHOWS": so passar o mouse (ou tocar) ja manda pra ultima
-    // foto do site (o cachorro). O destino fica so aqui no js, nao no href.
+    // pegadinha do "SHOWS": so passar o mouse (ou tocar) ja manda pra foto
+    // do cachorro (o Caramelo). O destino fica so aqui no js, nao no href.
     (function () {
       var shows = document.getElementById("link-shows");
       if (!shows) return;
-      var fotos = document.querySelectorAll('a[href^="pics/arrombs"]');
-      var cachorro = fotos.length ? fotos[fotos.length - 1].getAttribute("href") : "pics/arrombs5.jpg";
+      var cachorro = "pics/arrombs5.jpg";
       function abre(e) {
         if (e) e.preventDefault();
         window.location.href = cachorro;
