@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arrombados Anônimos — Agenda de Shows</title>
+    <link>https://arrombadosanonimos.com.br/</link>
+    <atom:link href="https://arrombadosanonimos.com.br/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Os shows da banda de punk trash fodace que ninguém pediu.</description>
+    <language>pt-BR</language>
+    <image>
+      <url>https://arrombadosanonimos.com.br/pics/logo.png</url>
+      <title>Arrombados Anônimos — Agenda de Shows</title>
+      <link>https://arrombadosanonimos.com.br/</link>
+    </image>
+
+    <item>
+      <title>02/07/2026 (qui) — Porão da Cerveja</title>
+      <link>https://arrombadosanonimos.com.br/#show-2026-07-02</link>
+      <guid isPermaLink="false">show-2026-07-02</guid>
+      <pubDate>Thu, 02 Jul 2026 21:00:00 -0300</pubDate>
+      <description>Show no Porão da Cerveja. Vai ser uma bosta.</description>
+    </item>
+
+    <item>
+      <title>24/05/2026 (dom) — Porão da Cerveja (já foi)</title>
+      <link>https://arrombadosanonimos.com.br/#show-2026-05-24</link>
+      <guid isPermaLink="false">show-2026-05-24</guid>
+      <pubDate>Sun, 24 May 2026 21:00:00 -0300</pubDate>
+      <description>Show no Porão da Cerveja. Que bom que você não foi.</description>
+    </item>
+  </channel>
+</rss>
