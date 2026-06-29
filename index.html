@@ -118,6 +118,7 @@ TÁ OLHANDO O QUE AQUI SEU ARROMBADO?
                 Shows do mais novo (topo) pro mais velho (fim).
                 Pra riscar um show que ja passou, embrulha o <div> inteiro do show em <s>...</s>.
                 Cada coisa na sua linha: data / local / mapa / piadinha (separadas por <br>).
+                NÃO ESQUECE DE ATUALIZAR A PORRA DO RSS
               -->
             <div id="show-2026-07-02">
               <b>02/07/2026 (qui)</b>
@@ -185,7 +186,7 @@ TÁ OLHANDO O QUE AQUI SEU ARROMBADO?
           <font face="Courier New" color="#00ffff"><b>
               [&nbsp;<a href="https://www.youtube.com/shorts/SewD2d73uUg">HOME</a>&nbsp;]
               [&nbsp;<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MÚSICAS</a>&nbsp;]
-              [&nbsp;<a href="https://www.4chan.org">SHOWS</a>&nbsp;]
+              [&nbsp;<a id="link-shows" href="#">SHOWS</a>&nbsp;]
               [&nbsp;<a id="link-fotos" href="https://fakeupdate.net/steam/">FOTOS</a>&nbsp;]
               [&nbsp;<a href="https://pudim.com.br/">LIVRO&nbsp;DE&nbsp;VISITAS</a>&nbsp;]
             </b></font>
@@ -213,6 +214,21 @@ TÁ OLHANDO O QUE AQUI SEU ARROMBADO?
       } else {
         link.href = "https://fakeupdate.net/steam/";
       }
+    })();
+
+    // pegadinha do "SHOWS": so passar o mouse (ou tocar) ja manda pra ultima
+    // foto do site (o cachorro). O destino fica so aqui no js, nao no href.
+    (function () {
+      var shows = document.getElementById("link-shows");
+      if (!shows) return;
+      var fotos = document.querySelectorAll('a[href^="pics/arrombs"]');
+      var cachorro = fotos.length ? fotos[fotos.length - 1].getAttribute("href") : "pics/arrombs5.jpg";
+      function abre(e) {
+        if (e) e.preventDefault();
+        window.location.href = cachorro;
+      }
+      shows.addEventListener("mouseover", abre);
+      shows.addEventListener("click", abre);
     })();
   </script>
 </body>
